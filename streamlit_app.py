@@ -16,7 +16,7 @@ input_text = st.text_area("Enter your text here:")
 # Display the entered text
 if input_text:
 
-    message = input_text
+    message = [input_text]
     seq = tokenizer.texts_to_sequences(message)
 
     padded = pad_sequences(seq, maxlen=50, dtype='int32', value=0)

@@ -6,8 +6,9 @@ with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 sentiment  = {'positive': 0,'neutral': 1,'negative':2}
 model = load_model('Mymodel.h5')
+model.summary()
 
-message = ['Apple is doing very well in this lousy economy.']
+message = ['Apple lost all of their assets']
 seq = tokenizer.texts_to_sequences(message)
 
 padded = pad_sequences(seq, maxlen=50, dtype='int32', value=0)
