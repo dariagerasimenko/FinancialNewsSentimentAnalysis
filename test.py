@@ -1,4 +1,3 @@
-import streamlit as st
 from tensorflow.keras.models import load_model
 import pickle
 import numpy as np
@@ -20,13 +19,3 @@ print(f"probability of positive class: {pred[0][sentiment['positive']]}")
 print(f"probability of neutral class: {pred[0][sentiment['neutral']]}")
 print(f"probability of negative class: {pred[0][sentiment['negative']]}")
 print(f"predicted class: {labels[np.argmax(pred)]}")
-
-st.title("RNN example : Financial News Sentiment Analysis")
-st.write(
-    "write the sentence to get an opinion"
-)
-input_text = st.text_area("Enter your text here:")
-# Display the entered text
-if input_text:
-    st.write("You entered:")
-    st.write(input_text)
