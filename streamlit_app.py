@@ -25,6 +25,5 @@ if input_text:
     st.write(f"probability of positive class: {pred[0][sentiment['positive']]}")
     st.write(f"probability of neutral class: {pred[0][sentiment['neutral']]}")
     st.write(f"probability of negative class: {pred[0][sentiment['negative']]}")
-    st.write(np.argmax(pred))
     st.write(f"predicted class: {labels[np.argmax(pred)]}")
 
