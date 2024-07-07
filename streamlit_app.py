@@ -7,7 +7,7 @@ with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 sentiment = {'positive': 0,'neutral': 1,'negative':2}
 model = load_model('Mymodel.h5')
-labels = ['positive', 'neutral', 'negative']
+labels = ['Positive', 'Neutral', 'Negative']
 st.title("RNN example : Financial News Sentiment Analysis")
 st.write(
     "write the sentence to get an opinion"
@@ -22,8 +22,8 @@ if input_text:
     padded = pad_sequences(seq, maxlen=50, dtype='int32', value=0)
 
     pred = model.predict(padded)
-    st.write(f"probability of positive class: {pred[0][sentiment['positive']]}")
-    st.write(f"probability of neutral class: {pred[0][sentiment['neutral']]}")
-    st.write(f"probability of negative class: {pred[0][sentiment['negative']]}")
-    st.write(f"predicted class: {labels[np.argmax(pred)]}")
+    st.write(f"Probability of positive class: {round(pred[0][sentiment['Positive']]*100)} %")
+    st.write(f"Probability of neutral class: {round(pred[0][sentiment['Neutral']]*100)} %")
+    st.write(f"Probability of negative class: {round(pred[0][sentiment['Negative']]*100)} %")
+    st.write(f"Predicted class: {labels[np.argmax(pred)]}")
 
