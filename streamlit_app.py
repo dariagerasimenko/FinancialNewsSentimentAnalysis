@@ -5,7 +5,7 @@ import numpy as np
 from keras.preprocessing.sequence import pad_sequences
 with open('tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
-sentiment = {'positive': 0,'neutral': 1,'negative':2}
+sentiment = {'Positive': 0,'Neutral': 1,'Negative':2}
 model = load_model('Mymodel.h5')
 labels = ['Positive', 'Neutral', 'Negative']
 st.title("RNN example : Financial News Sentiment Analysis")

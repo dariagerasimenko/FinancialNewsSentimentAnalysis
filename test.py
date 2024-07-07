@@ -16,7 +16,7 @@ padded = pad_sequences(seq, maxlen=50, dtype='int32', value=0)
 pred = model.predict(padded)
 print(message[0])
 labels = ['positive','neutral','negative']
-print(f"probability of positive class: {pred[0][sentiment['positive']]}")
+print(f"probability of positive class: {round(pred[0][sentiment['positive']]*100)}%")
 print(f"probability of neutral class: {pred[0][sentiment['neutral']]}")
 print(f"probability of negative class: {pred[0][sentiment['negative']]}")
 print(f"predicted class: {labels[np.argmax(pred)]}")
