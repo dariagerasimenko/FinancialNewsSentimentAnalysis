@@ -29,7 +29,7 @@ if input_text:
     predicted_class = labels[np.argmax(pred)]
 
     # Color coding for predicted class
-    color_dict = {'Positive': 'green', 'Neutral': 'yellow', 'Negative': 'red'}
+    color_dict = {'Positive': 'green', 'Neutral': 'blue', 'Negative': 'red'}
     color = color_dict[predicted_class]
 
     # Display the predicted class with color.
