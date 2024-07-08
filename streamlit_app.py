@@ -3,10 +3,10 @@ from tensorflow.keras.models import load_model
 import pickle
 import numpy as np
 from keras.preprocessing.sequence import pad_sequences
-with open('tokenizer.pickle', 'rb') as handle:
+with open('trained_model/tokenizer.pickle', 'rb') as handle:
     tokenizer = pickle.load(handle)
 sentiment = {'Positive': 0,'Neutral': 1,'Negative':2}
-model = load_model('Mymodel.h5')
+model = load_model('trained_model/Mymodel.h5')
 labels = ['Positive', 'Neutral', 'Negative']
 st.title("RNN example : Financial News Sentiment Analysis")
 st.write(
