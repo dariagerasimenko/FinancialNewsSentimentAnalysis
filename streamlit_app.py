@@ -10,9 +10,9 @@ model = load_model('trained_model/Mymodel.h5')
 labels = ['Positive', 'Neutral', 'Negative']
 st.title("RNN example : Financial News Sentiment Analysis")
 st.write(
-    "write the sentence to get an opinion"
+    "by Daria Gerasimenko, Student of HHU"
 )
-input_text = st.text_area("Enter your text here:")
+input_text = st.text_area("Enter your sentence to predict sentiment here:")
 # Display the entered text
 if input_text:
 
