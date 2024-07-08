@@ -12,7 +12,7 @@ st.title("LSTM: Financial News Sentiment Analysis")
 st.write(
     "by Daria Gerasimenko, Student of HHU"
 )
-default_text = "US banks suffer steeper losses"
+default_text = "Apple is doing very well in this lousy economy."
 input_text = st.text_area("Enter your sentence to predict sentiment here:", value=default_text)
 # Display the entered text
 if input_text:
