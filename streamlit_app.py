@@ -12,7 +12,7 @@ st.title("RNN example : Financial News Sentiment Analysis")
 st.write(
     "by Daria Gerasimenko, Student of HHU"
 )
-default_text = "Type here..."
+default_text = "US banks suffer steeper losses"
 input_text = st.text_input("Enter your sentence to predict sentiment here:", value=default_text)
 # Display the entered text
 if input_text:
