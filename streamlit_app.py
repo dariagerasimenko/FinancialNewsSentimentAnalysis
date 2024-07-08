@@ -32,6 +32,6 @@ if input_text:
     color_dict = {'Positive': 'green', 'Neutral': 'blue', 'Negative': 'red'}
     color = color_dict[predicted_class]
 
-    # Display the predicted class with color
+    # Display the predicted class with color.
     st.markdown(f"<span style='color:{color}'>Predicted class: {predicted_class}</span>", unsafe_allow_html=True)
 
