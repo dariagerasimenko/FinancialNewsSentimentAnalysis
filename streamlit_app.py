@@ -12,7 +12,7 @@ st.title("RNN example : Financial News Sentiment Analysis")
 st.write(
     "by Daria Gerasimenko, Student of HHU"
 )
-input_text = st.text_area("Enter your sentence to predict sentiment here:")
+input_text = st.text_input("Enter your sentence to predict sentiment here:")
 # Display the entered text
 if input_text:
 
